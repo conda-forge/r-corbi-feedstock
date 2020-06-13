@@ -1,4 +1,4 @@
-{% set version = "0.5-0" %}
+{% set version = "0.6-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Corbi_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Corbi/Corbi_{{ version }}.tar.gz
-  sha256: 7ce9815fb5779a4bcf7ce5b7bf24dbbe7c13a8054132d4672c546c8981075916
+  sha256: 4c84a94eb11bda0bf67115c6aa4f06271cfdaf101a8efaa4873c6fdae224539e
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -50,10 +50,9 @@ test:
 about:
   home: https://github.com/wulingyun/Corbi
   license: GPL (>= 2)
-  summary: Provides a bundle of basic and fundamental bioinformatics tools, such as network querying
-    and alignment, subnetwork extraction and search, network biomarker identification.
+  summary: Provides a bundle of basic and fundamental bioinformatics tools, such as network querying and alignment, subnetwork extraction and search, network biomarker identification.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
