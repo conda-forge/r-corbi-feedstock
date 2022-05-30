@@ -1,4 +1,4 @@
-{% set version = "0.6-1" %}
+{% set version = "0.6-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Corbi_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Corbi/Corbi_{{ version }}.tar.gz
-  sha256: 0529e140892de2d71f41ba0bc12d26fe499d20fcb59baec5dbf84d4a49cfe045
+  sha256: 82c0478c1009a0a06fda1b48a4411942fb89da74b6c99a0af9ef66c79c818b8e
 
 build:
   merge_build_host: true  # [win]
